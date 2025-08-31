@@ -1,0 +1,29 @@
+backend:
+  name: github
+  repo: HERO-WPC/heroblog # 替换为你的 GitHub 仓库
+  branch: main # 你的主分支
+media_folder: "static/uploads" # 图片上传路径
+public_folder: "/uploads"     # 图片在网站上的公共路径
+collections:
+  - name: "blog"
+    label: "博客文章"
+    folder: "content/blog" # 你的博客文章存放路径
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "标题", name: "title", widget: "string"}
+      - {label: "发布日期", "name": "date", widget: "datetime"}
+      - {label: "内容", name: "body", widget: "markdown"}
+      # 可以根据需要添加更多字段，如 tags, categories, featured_image 等
+      # - {label: "特色图片", name: "featured_image", widget: "image", required: false}
+
+  # 如果需要独立的页面管理，可以添加另一个 collection
+  - name: "pages"
+    label: "页面"
+    files:
+      - label: "关于我们"
+        name: "about"
+        file: "content/about.md"
+        fields:
+          - {label: "标题", name: "title", widget: "string"}
+          - {label: "内容", name: "body", widget: "markdown"}
