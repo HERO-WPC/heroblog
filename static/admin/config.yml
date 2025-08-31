@@ -2,7 +2,8 @@ backend:
   name: github
   repo: HERO-WPC/heroblog # 替换为你的 GitHub 仓库
   branch: main # 你的主分支
-  auth_endpoint: https://blog.herowpc.dpdns.org/github-auth 
+  auth_endpoint: https://blog.herowpc.dpdns.org/github-auth
+  site_domain: blog.herowpc.dpdns.org 
   #base_url: https://api.github.com
 media_folder: "static/uploads" # 图片上传路径
 public_folder: "/uploads"     # 图片在网站上的公共路径
