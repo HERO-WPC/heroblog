@@ -27,3 +27,4 @@ collections:
         fields:
           - {label: "标题", name: "title", widget: "string"}
           - {label: "内容", name: "body", widget: "markdown"}
+  
